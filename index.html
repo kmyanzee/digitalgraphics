@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="원석 이미지를 정밀 분석하여 개별 조각으로 분리 재구성한 벡터 그래픽">
+  <link rel="stylesheet" href="https://use.typekit.net/smo1exa.css">
+  <script src="https://use.typekit.net/smo1exa.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <svg class="gem-svg" viewBox="255 153 488 441" overflow="visible" xmlns="http://www.w3.org/2000/svg" aria-label="원석 다면체 조각">
+      <defs id="svg-defs">
+        <!-- Hover Preview ClipPath -->
+        <clipPath id="hover-clip">
+          <polygon id="hover-clip-polygon" points="" />
+        </clipPath>
+        <!-- Permanent Reveal ClipPath (제거된 원래 자리에 노출될 검정 텍스트 마스크) -->
+        <clipPath id="permanent-clip">
+        </clipPath>
+      </defs>
+
+      <!-- [레이어 2]: 제거된 원래 자리에 영구히 드러나는 검정 텍스트 레이어 -->
+      <g id="permanent-reveal-layer" class="permanent-reveal-layer" clip-path="url(#permanent-clip)" aria-hidden="true">
+        <text class="sentence-text text-black" x="523" y="261" text-anchor="middle">누가</text>
+        <text class="sentence-text text-black" x="481" y="309" text-anchor="middle">날</text>
+        <text class="sentence-text text-black" x="518" y="369" text-anchor="middle">깎아내린다면</text>
+        <text class="sentence-text text-black" x="504" y="426" text-anchor="middle">그냥 날 조각한다고</text>
+        <text class="sentence-text text-black" x="520" y="472" text-anchor="middle">생각할게</text>
+      </g>
+
+      <!-- [레이어 3]: 아직 남아 있는 검정 원석 조각들 -->
+      <g id="gem-group">
+        <polygon id="piece-01" class="gem-piece" points="519,173 445,237 446,209" />
+        <polygon id="piece-02" class="gem-piece" points="519,173 573,211 546,273 445,237" />
+        <polygon id="piece-03" class="gem-piece" points="573,211 620,208 605,260" />
+        <polygon id="piece-04" class="gem-piece" points="620,208 635,223 635,308 605,260" />
+        <polygon id="piece-05" class="gem-piece" points="573,211 605,260 635,308 546,273" />
+        <polygon id="piece-06" class="gem-piece" points="445,237 546,273 388,390 422,272" />
+        <polygon id="piece-07" class="gem-piece" points="546,273 553,313 388,390" />
+        <polygon id="piece-08" class="gem-piece" points="422,272 388,390 324,348" />
+        <polygon id="piece-09" class="gem-piece" points="546,273 635,308 667,343 658,448 553,313" />
+        <polygon id="piece-10" class="gem-piece" points="324,348 388,390 303,394" />
+        <polygon id="piece-11" class="gem-piece" points="553,313 658,448 470,457 388,390" />
+        <polygon id="piece-12" class="gem-piece" points="388,390 303,394 285,402 275,441" />
+        <polygon id="piece-13" class="gem-piece" points="667,343 685,402 654,518 658,448" />
+        <polygon id="piece-14" class="gem-piece" points="388,390 275,441 308,523" />
+        <polygon id="piece-15" class="gem-piece" points="685,402 723,447 654,518" />
+        <polygon id="piece-16" class="gem-piece" points="388,390 470,457 530,510 308,523" />
+        <polygon id="piece-17" class="gem-piece" points="658,448 654,518 639,535 597,526 470,457" />
+        <polygon id="piece-18" class="gem-piece" points="723,447 705,518 654,518" />
+        <polygon id="piece-19" class="gem-piece" points="470,457 597,526 563,535 530,510" />
+        <polygon id="piece-20" class="gem-piece" points="530,510 443,574 415,559 308,523" />
+        <polygon id="piece-21" class="gem-piece" points="530,510 491,564 443,574" />
+      </g>
+
+      <!-- [레이어 4]: Hover 중인 조각 내부의 흰색 preview 텍스트 레이어 -->
+      <g id="sentence-layer" class="gem-sentence-layer" clip-path="url(#hover-clip)" aria-hidden="true">
+        <text class="sentence-text text-white" x="523" y="261" text-anchor="middle">누가</text>
+        <text class="sentence-text text-white" x="481" y="309" text-anchor="middle">날</text>
+        <text class="sentence-text text-white" x="518" y="369" text-anchor="middle">깎아내린다면</text>
+        <text class="sentence-text text-white" x="504" y="426" text-anchor="middle">그냥 날 조각한다고</text>
+        <text class="sentence-text text-white" x="520" y="472" text-anchor="middle">생각할게</text>
+      </g>
+
+      <!-- [레이어 5]: 제거되었거나 활성 드래그 중인 조각 그룹 (텍스트 Cutout 포함) -->
+      <g id="removed-group">
+      </g>
+    </svg>
+  </main>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
